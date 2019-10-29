@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+
+    <View
+        android:id="@+id/fabBGLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/fabLayoutMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:padding="@dimen/standard_12">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:gravity="center_vertical"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_add" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fabLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/standard_12"
+        android:clipToPadding="false"
+        android:layout_marginEnd="@dimen/standard_23"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/standard_23"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sleep_now"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSleepNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_add_sleep_now"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:fabSize="mini"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fabLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/standard_12"
+        android:clipToPadding="false"
+        android:layout_marginEnd="@dimen/standard_23"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/standard_23"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sleep_by"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabSleepBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_add_sleepby"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:fabSize="mini"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fabLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/standard_12"
+        android:clipToPadding="false"
+        android:layout_marginEnd="@dimen/standard_23"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/standard_23"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/awake_by"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabAwakeBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/ic_add_alarm"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:fabSize="mini"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

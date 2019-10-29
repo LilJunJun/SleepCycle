@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CyclePickerActivity"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sleepAtTextView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Sleep At:"
+            android:textSize="24sp"
+            android:gravity="left|center"
+            android:textColor="@android:color/background_light"
+            android:paddingLeft="10sp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/wakeUpAtTextView"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:text="Wake Up At:"
+            android:textSize="24sp"
+            android:gravity="left|center"
+            android:textColor="@android:color/background_light"
+            android:paddingLeft="10sp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <ListView
+            android:id="@+id/cycleList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>

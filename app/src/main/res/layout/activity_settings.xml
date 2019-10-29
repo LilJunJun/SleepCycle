@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/disableTextviewSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable Floating View  "
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/timeToSleepTV"
+        android:layout_below="@id/disableTextviewSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time to Fall Asleep (minutes): "
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        />
+
+    <EditText
+        android:id="@+id/minToSleepET"
+        android:layout_below="@+id/disableTextviewSwitch"
+        android:layout_toEndOf="@id/timeToSleepTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="2"
+        android:text="14"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"/>
+
+    <Button
+        android:id="@+id/saveSettingsButton"
+        android:layout_below="@+id/timeToSleepTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="Update Changes"
+        android:textColor="@android:color/background_light"
+        android:background="@color/colorPrimary"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"/>
+
+
+</RelativeLayout>

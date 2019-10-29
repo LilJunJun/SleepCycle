@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="information">
+        <item>"The ideal amount of sleep cycles are 5–7 cycles"</item>
+        <item>"The average duration of a single sleep cycle is 90 minutes"</item>
+        <item>"It takes approximately 14 minutes to fall asleep for a human being"</item>
+        <item>"Adjust the time it takes for you to fall asleep in "Settings""</item>
+        <item>"To disable this view, visit "Settings" and tap "Disable Floating Text""</item>
+    </string-array>
+
+</resources>
