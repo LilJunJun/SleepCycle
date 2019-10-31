@@ -7,13 +7,16 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SwitchCompat;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 
 public class Settings extends AppCompatActivity
 {
+    TextView settingsInfo;
     SwitchCompat floatingTVSwitch;
     Boolean floatTV;
     EditText minToFallAsleepET;
@@ -26,9 +29,20 @@ public class Settings extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        settingsInfo = findViewById(R.id.settingsInfo);
         floatingTVSwitch = findViewById(R.id.disableTextviewSwitch);
         minToFallAsleepET = findViewById(R.id.minToSleepET);
         saveSettingsBT = findViewById(R.id.saveSettingsButton);
+
+        Toolbar mToolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        mToolbar.setNavigationIcon(R.drawable.ic_back);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         SharedPreferences sp = getSharedPreferences("sc_prefs", Activity.MODE_PRIVATE);
         floatTV = sp.getBoolean("switch", true);
@@ -62,13 +76,20 @@ public class Settings extends AppCompatActivity
             public void onClick(View v)
             {
                 String value = minToFallAsleepET.getText().toString();
-                int minToFallAsleep = Integer.parseInt(value);
-
+                int minToFallAsleep;
                 SharedPreferences sp = getSharedPreferences("sc_prefs", Activity.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
+                if(value.equals(""))
+                {
+                    minToFallAsleep = 0;
+                }
+                else
+                {
+                    minToFallAsleep = Integer.parseInt(value);
+
+                }
                 editor.putInt("minToFallAsleep", minToFallAsleep);
                 editor.apply();
-
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }

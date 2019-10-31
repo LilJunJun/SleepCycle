@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimaryDark"
     tools:context=".Info">
 
-    <TextView
-        android:id="@+id/intro"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:text="If you’re struggling with getting enough sleep, or you’re feeling groggy and disorientated in the morning, you may have issues revolving around sleep cycles."
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textSize="20dp"
-        android:textStyle="italic" />
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
 
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
         android:text="How this app works"
+        android:textAlignment="center"
         android:textColor="@color/colorSecondary"
         android:textSize="22dp"
-        android:textAlignment="center"
-        android:paddingTop="10dp"
-        android:layout_below="@+id/intro"
-        />
+        android:layout_below="@+id/toolbarLayout"/>
 
     <TextView
         android:id="@+id/body"
@@ -39,64 +41,64 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:autoLink="web"
-        android:paddingStart="5dp"
+        android:fontFamily="serif"
+        android:paddingStart="8dp"
         android:paddingTop="10dp"
-        android:paddingEnd="5dp"
+        android:paddingEnd="8dp"
         android:text="Set a personalized alarm at the end of your sleep cycle to optimize the amount of sleep you will receive with unprovoked awakening throughout sleep cycle times. "
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="20dp" />
 
-
     <TextView
-    android:id="@+id/title1"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Understanding Sleep Cycles"
-    android:textColor="@color/colorSecondary"
-    android:textSize="24dp"
-    android:textAlignment="center"
-    android:paddingTop="10dp"
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/body"
-    />
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="Understanding Sleep Cycles"
+        android:textAlignment="center"
+        android:textColor="@color/colorSecondary"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/body1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sleep Cycles are "
-        android:textColor="@android:color/background_light"
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:paddingTop="10dp"
         android:layout_below="@+id/title1"
         android:autoLink="web"
-        />
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="Sleep Cycles are "
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/title2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How much sleep do I need?"
-        android:textColor="@color/colorSecondary"
-        android:textSize="24dp"
-        android:textAlignment="center"
-        android:paddingTop="10dp"
         android:layout_below="@+id/body1"
-        />
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="How much sleep do I need?"
+        android:textAlignment="center"
+        android:textColor="@color/colorSecondary"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/body2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Most adults need 7 to 9 hours of sleep each night."
-        android:textColor="@android:color/background_light"
-        android:textSize="18dp"
-        android:textAlignment="center"
-        android:paddingTop="10dp"
         android:layout_below="@+id/title2"
         android:autoLink="web"
-        />
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="Most adults need 7 to 9 hours of sleep each night."
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18dp" />
 
 
 </RelativeLayout>

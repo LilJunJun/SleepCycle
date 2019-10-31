@@ -8,58 +8,92 @@
     tools:context=".Settings"
     android:background="@color/colorPrimaryDark">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/settingsInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="It takes about 14 minutes for an average adult to fall asleep. You may adjust the time it takes for you to fall asleep here.\n(Default: 14 minutes)\n\nRemember to 'Update Changes' when done."
+        android:textSize="18sp"
+        android:textColor="@android:color/background_light"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/toolbarLayout"/>
+
     <android.support.v7.widget.SwitchCompat
         android:id="@+id/disableTextviewSwitch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enable Floating View  "
-        android:textSize="18sp"
-        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/settingsInfo"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="serif"
         android:paddingStart="15dp"
-        android:paddingEnd="15dp"
         android:paddingTop="10dp"
+        android:paddingEnd="15dp"
         android:paddingBottom="10dp"
-        android:background="@color/colorPrimaryDark" />
+        android:text="Enable Floating View  "
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/timeToSleepTV"
-        android:layout_below="@id/disableTextviewSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time to Fall Asleep (minutes): "
-        android:textSize="18sp"
-        android:textColor="@android:color/background_light"
+        android:layout_below="@id/disableTextviewSwitch"
+        android:fontFamily="serif"
         android:paddingStart="15dp"
-        android:paddingEnd="15dp"
         android:paddingTop="10dp"
+        android:paddingEnd="15dp"
         android:paddingBottom="10dp"
-        />
+        android:text="Time to Fall Asleep (minutes): "
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/minToSleepET"
-        android:layout_below="@+id/disableTextviewSwitch"
-        android:layout_toEndOf="@id/timeToSleepTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/disableTextviewSwitch"
+        android:layout_toEndOf="@id/timeToSleepTV"
+        android:fontFamily="serif"
         android:inputType="number"
         android:maxLength="2"
         android:text="14"
-        android:textSize="18sp"
         android:textAlignment="center"
-        android:textColor="@android:color/background_light"/>
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/saveSettingsButton"
-        android:layout_below="@+id/timeToSleepTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="Update Changes"
-        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/timeToSleepTV"
+        android:layout_centerInParent="true"
         android:background="@color/colorPrimary"
+        android:fontFamily="serif"
         android:paddingStart="5dp"
-        android:paddingEnd="5dp"/>
+        android:paddingEnd="5dp"
+        android:text="Update Changes"
+        android:textColor="@color/colorSecondary" />
 
 
 </RelativeLayout>

@@ -271,6 +271,12 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
             startActivity(goToInfo);
             return true;
         }
+        if (id == R.id.action_help)
+        {
+            Intent goToHelp = new Intent(this, Help.class);
+            startActivity(goToHelp);
+            return true;
+        }
         if (id == R.id.action_settings)
         {
             Intent goToSettings = new Intent(this, Settings.class);
