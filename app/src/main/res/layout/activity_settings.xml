@@ -39,26 +39,11 @@
         android:background="@color/colorPrimaryDark"
         android:layout_below="@id/toolbarLayout"/>
 
-    <android.support.v7.widget.SwitchCompat
-        android:id="@+id/disableTextviewSwitch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/settingsInfo"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="serif"
-        android:paddingStart="15dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="15dp"
-        android:paddingBottom="10dp"
-        android:text="Enable Floating View  "
-        android:textColor="@color/colorSecondary"
-        android:textSize="18sp" />
-
     <TextView
         android:id="@+id/timeToSleepTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/disableTextviewSwitch"
+        android:layout_below="@+id/settingsInfo"
         android:fontFamily="serif"
         android:paddingStart="15dp"
         android:paddingTop="10dp"
@@ -72,7 +57,7 @@
         android:id="@+id/minToSleepET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/disableTextviewSwitch"
+        android:layout_below="@+id/settingsInfo"
         android:layout_toEndOf="@id/timeToSleepTV"
         android:fontFamily="serif"
         android:inputType="number"

@@ -66,19 +66,6 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         listOfSleepCycles = new ArrayList<>();
         infoTextview = findViewById(R.id.fadingTextView);
 
-        SharedPreferences sp = getSharedPreferences("sc_prefs", Activity.MODE_PRIVATE);
-        floatTV = sp.getBoolean("switch", true);
-
-        if (floatTV)
-        {
-            infoTextview.setVisibility(View.VISIBLE);
-            infoTextview.resume();
-        }
-        else {
-            infoTextview.setVisibility(View.INVISIBLE);
-            infoTextview.pause();
-        }
-
         //region Floating Action Button
         fabMain = findViewById(R.id.fabMain);
         fabSleepBy = findViewById(R.id.fabSleepBy);
@@ -187,12 +174,8 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
 
     private void closeFABMenu()
     {
-
-        if(floatTV)
-        {
-            infoTextview.resume();
-            infoTextview.setVisibility(View.VISIBLE);
-        }
+        infoTextview.resume();
+        infoTextview.setVisibility(View.VISIBLE);
 
         isFABOpen=false;
         fabBGLayout.setVisibility(View.GONE);

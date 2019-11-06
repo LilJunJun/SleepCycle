@@ -17,20 +17,22 @@
         android:background="@drawable/border_bottom_line">
 
         <TextView
-            android:gravity="start|center"
-            android:paddingStart="24dp"
-            android:textColor="@color/cardview_light_background"
-            android:text="8:30 PM"
-            android:textSize="24dp"
+            android:id="@+id/cycleTimeTextView"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:id="@+id/cycleTimeTextView"/>
+            android:fontFamily="serif"
+            android:gravity="start|center"
+            android:paddingStart="24dp"
+            android:text="8:30 PM"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/numOfCyclesTextView"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_below="@+id/cycleTimeTextView"
+            android:fontFamily="serif"
             android:gravity="start|center"
             android:paddingStart="24dp"
             android:text="1 Cycles ~ 1h 30m"

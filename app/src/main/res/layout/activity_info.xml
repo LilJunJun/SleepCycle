@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorPrimaryDark"
     tools:context=".Info">
+
+        <RelativeLayout
+            android:id="@+id/form_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbarLayout"
@@ -23,16 +29,17 @@
 
     </android.support.design.widget.AppBarLayout>
 
+
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
         android:paddingTop="10dp"
-        android:text="How this app works"
+        android:text="@string/info_title"
         android:textAlignment="center"
         android:textColor="@color/colorSecondary"
-        android:textSize="22dp"
+        android:textSize="24sp"
         android:layout_below="@+id/toolbarLayout"/>
 
     <TextView
@@ -45,10 +52,10 @@
         android:paddingStart="8dp"
         android:paddingTop="10dp"
         android:paddingEnd="8dp"
-        android:text="Set a personalized alarm at the end of your sleep cycle to optimize the amount of sleep you will receive with unprovoked awakening throughout sleep cycle times. "
+        android:text="@string/info_body"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="20dp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/title1"
@@ -57,10 +64,10 @@
         android:layout_below="@+id/body"
         android:fontFamily="serif"
         android:paddingTop="10dp"
-        android:text="Understanding Sleep Cycles"
+        android:text="@string/info_title1"
         android:textAlignment="center"
         android:textColor="@color/colorSecondary"
-        android:textSize="24dp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/body1"
@@ -70,10 +77,10 @@
         android:autoLink="web"
         android:fontFamily="serif"
         android:paddingTop="10dp"
-        android:text="Sleep Cycles are "
+        android:text="A sleep cycle lasts about 90 minutes, and during that time we move between phases of sleep (REM and NREM).\n\n If sleep is cut short, the body doesn’t have time to complete all of the phases needed for muscle repair, memory consolidation and release of hormones regulating growth and appetite. Then we wake up less prepared to concentrate, make decisions, or engage fully in school, work, and social activities."
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="20dp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/title2"
@@ -82,10 +89,10 @@
         android:layout_below="@+id/body1"
         android:fontFamily="serif"
         android:paddingTop="10dp"
-        android:text="How much sleep do I need?"
+        android:text="@string/info_title2"
         android:textAlignment="center"
         android:textColor="@color/colorSecondary"
-        android:textSize="24dp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/body2"
@@ -95,10 +102,72 @@
         android:autoLink="web"
         android:fontFamily="serif"
         android:paddingTop="10dp"
-        android:text="Most adults need 7 to 9 hours of sleep each night."
+        android:text="Adults need 7 to 9 hours of sleep\n  Teens need at least 8 hours of sleep "
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
-        android:textSize="18dp" />
+        android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/body2"
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="@string/info_title3"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/body3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_toEndOf="@+id/title3"
+        android:layout_below="@+id/body2"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="@string/referenceBasics"
+        android:textColorLink="#3df7c5"
+        android:textColor="#3df7c5"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/body4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/body3"
+        android:layout_toEndOf="@+id/title3"
+        android:autoLink="web"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="serif"
+        android:paddingTop="10dp"
+        android:text="@string/referenceCycles"
+        android:textColorLink="#3df7c5"
+        android:textColor="#3df7c5"
+        android:textSize="16sp"
+        />
+
+            <TextView
+                android:id="@+id/body5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/body4"
+                android:layout_toEndOf="@+id/title3"
+                android:autoLink="web"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="serif"
+                android:paddingTop="10dp"
+                android:text="@string/referenceBodyClock"
+                android:textAlignment="textStart"
+                android:textColor="#3df7c5"
+                android:textColorLink="#3df7c5"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+</ScrollView>

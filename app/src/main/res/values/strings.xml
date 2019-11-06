@@ -10,4 +10,12 @@
     <string name="settings">Settings</string>
     <string name="about">About</string>
     <string name="help">Help</string>
+    <string name="referenceBasics"><a href='https://my.clevelandclinic.org/health/articles/12148-sleep-basics'> Sleep Basics </a></string>
+    <string name="referenceCycles"><a href='https://www.sleep.org/articles/sleepwake-cycle/'> Sleep-Wake Cycles </a></string>
+    <string name="referenceBodyClock"><a href='https://www.sleepfoundation.org/articles/what-happens-when-you-sleep'> What Happens When You Sleep </a></string>
+    <string name="info_body">Set a personalized alarm at the end of your sleep cycle to optimize the amount of sleep you will receive with unprovoked awakening throughout sleep cycle times.</string>
+    <string name="info_title1">Understanding Sleep Cycles</string>
+    <string name="info_title2">How much sleep do I need?</string>
+    <string name="info_title">How this app works</string>
+    <string name="info_title3">Article Links:</string>
 </resources>

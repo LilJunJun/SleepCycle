@@ -71,9 +71,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fontFamily="serif"
             android:text="@string/sleep_now"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"/>
+            android:textColor="@android:color/white" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabSleepNow"
@@ -100,9 +101,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fontFamily="serif"
             android:text="@string/sleep_by"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"/>
+            android:textColor="@android:color/white" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabSleepBy"
@@ -129,9 +131,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:fontFamily="serif"
             android:text="@string/awake_by"
-            android:textColor="@android:color/white"
-            android:background="@color/colorPrimary"/>
+            android:textColor="@android:color/white" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fabAwakeBy"

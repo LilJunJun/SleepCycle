@@ -16,23 +16,25 @@
             android:id="@+id/sleepAtTextView"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="Sleep At:"
-            android:textSize="24sp"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="serif"
             android:gravity="left|center"
-            android:textColor="@android:color/background_light"
             android:paddingLeft="10sp"
-            android:background="@color/colorPrimaryDark"/>
+            android:text="Sleep At:"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/wakeUpAtTextView"
             android:layout_width="match_parent"
             android:layout_height="53dp"
-            android:text="Wake Up At:"
-            android:textSize="24sp"
+            android:background="@color/colorPrimaryDark"
+            android:fontFamily="serif"
             android:gravity="left|center"
-            android:textColor="@android:color/background_light"
             android:paddingLeft="10sp"
-            android:background="@color/colorPrimaryDark"/>
+            android:text="Wake Up At:"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp" />
 
         <ListView
             android:id="@+id/cycleList"

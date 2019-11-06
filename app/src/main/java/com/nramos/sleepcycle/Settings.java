@@ -17,8 +17,6 @@ import android.widget.TextView;
 public class Settings extends AppCompatActivity
 {
     TextView settingsInfo;
-    SwitchCompat floatingTVSwitch;
-    Boolean floatTV;
     EditText minToFallAsleepET;
     Button saveSettingsBT;
     int minToFallAsleep;
@@ -30,7 +28,6 @@ public class Settings extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
         settingsInfo = findViewById(R.id.settingsInfo);
-        floatingTVSwitch = findViewById(R.id.disableTextviewSwitch);
         minToFallAsleepET = findViewById(R.id.minToSleepET);
         saveSettingsBT = findViewById(R.id.saveSettingsButton);
 
@@ -45,31 +42,9 @@ public class Settings extends AppCompatActivity
         });
 
         SharedPreferences sp = getSharedPreferences("sc_prefs", Activity.MODE_PRIVATE);
-        floatTV = sp.getBoolean("switch", true);
         minToFallAsleep = sp.getInt("minToFallAsleep", 14);
 
         minToFallAsleepET.setText(minToFallAsleep+"");
-
-        if(floatTV)
-        {
-            floatingTVSwitch.setChecked(true);
-        }
-        else
-        {
-            floatingTVSwitch.setChecked(false);
-        }
-
-        floatingTVSwitch.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v)
-           {
-               floatTV = floatingTVSwitch.isChecked();
-               SharedPreferences sp = getSharedPreferences("sc_prefs", Activity.MODE_PRIVATE);
-               SharedPreferences.Editor editor = sp.edit();
-               editor.putBoolean("switch", floatTV);
-               editor.apply();
-           }
-       });
 
         saveSettingsBT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,10 +81,6 @@ public class Settings extends AppCompatActivity
         SharedPreferences sp = getSharedPreferences("sc_prefs", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
         editor.putInt("minToFallAsleep", minToFallAsleep);
-        editor.apply();
-
-        floatTV = floatingTVSwitch.isChecked();
-        editor.putBoolean("switch", floatTV);
         editor.apply();
 
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
