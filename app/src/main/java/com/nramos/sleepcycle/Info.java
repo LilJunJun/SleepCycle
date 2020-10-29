@@ -1,9 +1,16 @@
 package com.nramos.sleepcycle;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.SpannableStringBuilder;
 import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
+import android.text.style.URLSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -30,9 +37,31 @@ public class Info extends AppCompatActivity
         body3 = findViewById(R.id.body3);
         body4 = findViewById(R.id.body4);
         body5 = findViewById(R.id.body5);
+        body3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent browser= new Intent(Intent.ACTION_VIEW, Uri.parse("https://my.clevelandclinic.org/health/articles/12148-sleep-basics"));
+                startActivity(browser);
+            }
+        });
+        body4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent browser= new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.sleep.org/articles/sleepwake-cycle/"));
+                startActivity(browser);
+            }
+        });
+        body5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent browser= new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.sleepfoundation.org/articles/what-happens-when-you-sleep"));
+                startActivity(browser);
+            }
+        });
 
-        body3.setMovementMethod(LinkMovementMethod.getInstance());
-        body4.setMovementMethod(LinkMovementMethod.getInstance());
-        body5.setMovementMethod(LinkMovementMethod.getInstance());
     }
+
 }

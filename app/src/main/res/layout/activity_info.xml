@@ -8,7 +8,7 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".Info">
 
-        <RelativeLayout
+    <RelativeLayout
             android:id="@+id/form_layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
@@ -122,11 +122,12 @@
         android:id="@+id/body3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_toEndOf="@+id/title3"
+        android:layout_toEndOf="@+id/title3"
         android:layout_below="@+id/body2"
-        android:autoLink="web"
+        android:autoLink="all"
         android:clickable="true"
         android:focusable="true"
+        android:linksClickable="true"
         android:fontFamily="serif"
         android:paddingTop="10dp"
         android:text="@string/referenceBasics"
